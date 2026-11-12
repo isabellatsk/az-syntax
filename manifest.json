@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Azure DevOps Vue Syntax",
+  "version": "0.1.0",
+  "description": "Adds syntax highlighting to Vue files in the code preview and in Azure DevOps pull requests",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://dev.azure.com/*"
+      ],
+      "js": ["src/inject.js"],
+      "world": "MAIN",
+      "run_at": "document_idle"
+    }
+  ]
+}
